@@ -16,11 +16,6 @@ class CarModel(db.Model):
         self.price = price
         self.image = image
 
-
-    def  __str__(self) -> str:
-        return "c'est la voiture"+str(self.name)+" et elle a pour prix"+str(self.price)
-
-
     def serialize(self):
         return {
         'id': self.id,
@@ -28,3 +23,6 @@ class CarModel(db.Model):
         'price': self.price,
         'image':self.image
         }
+
+    def  __str__(self) -> str:
+        return "c'est la voiture"+str(self.name)+" et elle a pour prix"+str(self.price)

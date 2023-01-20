@@ -1,15 +1,13 @@
 from flask import Flask, jsonify, request
 import os
 import db
-from models import car
+import car
 
 app = Flask(__name__)
+# app.run(host='localhost', port=5000)
 
 if not os.path.isfile('cars.db'):
     db.connect()
-
-# app.run(host='localhost', port=5000)
-
 
 @app.route("/", methods=["GET"])
 def hello():
