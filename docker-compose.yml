@@ -12,7 +12,3 @@ services:
       FLASK_ENV: development
     networks:
       - app-network
-
-networks:
-  app-network:
-    driver: bridge
